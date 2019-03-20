@@ -39,6 +39,8 @@ logfile /var/log/rinetd.log
 pkill rinetd
 #启动进程
 rinetd -c /etc/rinetd.conf
+#无间断重启
+pkill -SIGHUP rinetd
 #查看是否成功
 netstat -tanulp|grep rinetd
 #开机自启动
